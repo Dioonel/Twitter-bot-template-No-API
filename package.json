@@ -1,0 +1,20 @@
+{
+  "name": "onimai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dionel Martinez <dionelmartinezc@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cron": "^2.1.0",
+    "puppeteer": "^19.6.3",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.1",
+    "request": "^2.88.2"
+  }
+}
