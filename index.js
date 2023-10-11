@@ -27,7 +27,7 @@ async function main() {
         await loadCookies(page);
         await page.goto(homeUrl, {waitUntil: 'networkidle2'});
 
-        let isLoggedIn = await page.$('div[aria-label="Tweet text"]');
+        let isLoggedIn = await page.$('div[aria-label="Post text"]');
         if(isLoggedIn) {
             await tweet(page);
         } else {
@@ -86,8 +86,8 @@ async function login(page) {
 async function tweet(page) {
     try{
         console.log('[TWEET FUNCTION]');
-        await page.waitForSelector('div[aria-label="Tweet text"]', {visible: true}, {timeout: 10000});
-        await page.click('div[aria-label="Tweet text"]', {delay: 200});
+        await page.waitForSelector('div[aria-label="Post text"]', {visible: true}, {timeout: 10000});
+        await page.click('div[aria-label="Post text"]', {delay: 200});
         await page.keyboard.type('Hello world!', {delay: 270});                                             // type your tweet
         await page.waitForTimeout(500);
         const elementHandle = await page.$("input[type=file]");
